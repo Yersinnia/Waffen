@@ -34,6 +34,9 @@ Rang 1:
 - Protector 9 mm [[SMG_05_F]]
 - 30Rnd_9x21_Mag_SMG_02 [[Protector Muni]]
 
+- SDAR 5.56 mm [[arifle_SDAR_F]]
+- 30Rnd_556x45_Stanag [[SDAR Ammo]]
+
 Rang 2:
 
 - SPAR-16 5.56 mm (Black) [[arifle_SPAR_01_blk_F]]
