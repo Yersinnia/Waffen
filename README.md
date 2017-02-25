@@ -25,6 +25,7 @@ Polizei:
 - Polizei Rundfunk
 - SEK - Shop/Fhrzeuge/Waffen
 - SEK/Polizei Ausbildung
+- 1H Redbull für Cops
 
 
 Waffen Wünsche/Vorschläge:
