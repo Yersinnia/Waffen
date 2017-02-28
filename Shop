@@ -1,0 +1,142 @@
+//===================================================\\
+//Cop Shops, Doppelte Waffen sind Anders Farbig...!!!\\
+//						 EDIT:						 \\
+//						Yannik						 \\
+//===================================================\\
+    class cop_basic {
+        name = "Altis Cop Shop";
+        side = "cop";
+        license = "";
+        level[] = { "", "", -1, "" };
+        items[] = {
+			//Standart
+            { "Binocular", "", 150, -1, { "", "", -1 } }, //Fernglas
+            { "ItemGPS", "", 100, 45, { "", "", -1 } }, //GPS
+			{ "ItemCompass", "", 100, 45, { "", "", -1 } }, //Kompass
+            { "FirstAidKit", "", 150, 65, { "", "", -1 } }, //EHS
+            { "NVGoggles", "", 2000, 980, { "", "", -1 } }, //NV
+            { "HandGrenade_Stone", "Flashbang", 1700, -1, { "", "", -1 } }, //Flashbang
+            { "hgun_P07_snds_F", "Stun Pistol", 2000, 650, { "", "", -1 } }, //Tazer
+            //Cop Rang 1
+            { "SMG_05_F", "", 7500, 1500, { "", "", -1 } }, //Protector
+			{ "SMG_02_F", "", 7500, 1500, { "", "", -1 } }, //Sting
+			//Cop Rang 2
+            { "arifle_MX_Black_F", "", 30000, -1, {"life_coplevel", "SCALAR", 2 } }, //MX
+			{ "arifle_SPAR_01_blk_F", "", 17500, -1, {"life_coplevel", "SCALAR", 2 } }, //Spar-16
+			{ "arifle_ARX_blk_F", "", 17500, -1, {"life_coplevel", "SCALAR", 2 } }, //Typ 115
+			//Cop Rang 3
+            { "arifle_MXM_Black_F", "", 17500, -1, {"life_coplevel", "SCALAR", 3 } }, //MXM
+			{ "arifle_MXM_khk_F", "", 17500, -1, {"life_coplevel", "SCALAR", 3 } },	//MXM
+			{ "arifle_CTARS_blk_F", "", 17500, -1, {"life_coplevel", "SCALAR", 3 } }, //CAR-95	
+			//Cop Rang 4
+			{ "Medikit", "", 150, -1, { "", "", -1 } },//Verbandskaste
+			{ "SmokeShellgreen", "", 150, 15, {"life_coplevel", "SCALAR", 4 } }, //Smoke Green
+			{ "SmokeShellRed", "Traenengas", 150, 15, {"life_coplevel", "SCALAR", 4 } }, //Smoke Red
+			{ "arifle_MX_SW_Black_F", "", 150, 15, {"life_coplevel", "SCALAR", 4 } }, //MXSW
+            { "srifle_DMR_04_F", "", 150, 15, {"life_coplevel", "SCALAR", 4 } }, //ASP-1
+			{ "srifle_DMR_03_F", "", 150, 15, {"life_coplevel", "SCALAR", 4 } }, //MK-1
+			{ "arifle_SPAR_02_blk_Pointer_F", "", 150, 15, {"life_coplevel", "SCALAR", 4 } }, //SPAR-16S
+			{ "arifle_SPAR_03_blk_F", "", 150, 15, {"life_coplevel", "SCALAR", 4 } }, //SPAR-17
+			//Cop Rang 5
+			{ "srifle_DMR_03_khaki_F", "", 150, 15, {"life_coplevel", "SCALAR", 5 } }, //MK-1
+			{ "srifle_EBR_F", "", 150, 15, {"life_coplevel", "SCALAR", 5 } }, //MK18
+			{ "LMG_Mk200_F", "", 515, 15, {"life_coplevel", "SCALAR", 5 } }, //MK200
+			{ "arifle_MX_GL_Black_F", "", 515, 15, {"life_coplevel", "SCALAR", 5 } }, //MX3GL
+			//Cop Rang 6
+			{ "srifle_DMR_05_blk_F", "", 150, 15, {"life_coplevel", "SCALAR", 6 } }, //Cyrus
+			{ "srifle_DMR_02_F", "", 150, 15, {"life_coplevel", "SCALAR", 6 } }, //MAR-10
+			{ "srifle_DMR_02_camo_F", "", 150, 15, {"life_coplevel", "SCALAR", 6 } }, //MAR-10
+			{ "LMG_Zafir_F", "", 150, 15, {"life_coplevel", "SCALAR", 6 } }, //Zafir
+            { "DemoCharge_Remote_Mag", "", 150, 15, {"life_coplevel", "SCALAR", 6 } }, //Sprengladung
+			//Cop Rang 7
+			{ "arifle_AK12_GL_F", "", 15, 15, {"life_coplevel", "SCALAR", 7 } }, //AK12GL
+			{ "arifle_SPAR_01_khk_F", "", 15, 15, {"life_coplevel", "SCALAR", 7 } }, //SPAR-16
+			{ "LMG_03_F", "", 15, 15, {"life_coplevel", "SCALAR", 7 } }, //LIM
+			{ "MMG_02_black_F", "", 15, 15, {"life_coplevel", "SCALAR", 7 } }, //SPMG
+			{ "srifle_DMR_07_blk_DMS_F", "", 15, 15, {"life_coplevel", "SCALAR", 7 } }, //Navid
+			{ "MMG_01_hex_F", "", 15, 15, {"life_coplevel", "SCALAR", 7 } }, //LRR
+			{ "srifle_DMR_02_camo_AMS_LP_F", "", 15, 15, {"life_coplevel", "SCALAR", 7 } }, //Mar-10
+			{ "srifle_GM6_ghex_LRPS_F", "", 15, 15, {"life_coplevel", "SCALAR", 7 } }, //Lynx
+			{ "srifle_LRR_tna_LRPS_F", "", 15, 15, {"life_coplevel", "SCALAR", 7 } }, //LRR Tropen
+			{ "srifle_LRR_F", "", 15, 15, {"life_coplevel", "SCALAR", 7 } }, //LRR
+			{ "launch_RPG32_F", "", 15, 15, {"life_coplevel", "SCALAR", 7 } }, //RPG-Alamut
+			{ "launch_O_Titan_F", "", 15, 15, {"life_coplevel", "SCALAR", 7 } }, //Titan AA
+			{ "launch_NLAW_F", "", 15, 15, {"life_coplevel", "SCALAR", 7 } },//NLAW
+			{ "HandGrenade", "", 150, 65, {"life_coplevel", "SCALAR", 7 } },//Granate
+			{ "hgun_ACPC2_F", "", 1200, 980, {"life_coplevel", "SCALAR", 7 } },//ACP
+			{ "B_UavTerminal", "", 1200, 980, {"life_coplevel", "SCALAR", 7 } },//UAV
+			{ "Laserdesignator_02", "", 100, 45, {"life_coplevel", "SCALAR", 7 } },//Laserdesignator
+            { "Laserbatteries", "", 100, 45, {"life_coplevel", "SCALAR", 7 } },//Batterie
+			{ "NVGogglesB_blk_F", "", 1200, 980, {"life_coplevel", "SCALAR", 7 } },//ENVG
+			{ "NVGogglesB_grn_F", "", 1200, 980, {"life_coplevel", "SCALAR", 7 } }//ENVG
+        };
+        mags[] = {
+            { "30Rnd_9x21_Mag_SMG_02", "", 25, 100, { "", "", -1 } }, //Sting/Protector
+            { "30Rnd_9x21_Mag", "", 25, 100, { "", "", -1 } }, //P07 Ammo
+            { "30Rnd_65x39_caseless_mag", "", 130, 100, { "", "", -1 } },//MX Ammo
+            { "100Rnd_65x39_caseless_mag_Tracer", "", 250, 100, {"life_coplevel", "SCALAR", 3 } },//MXSW Ammo
+            { "20Rnd_762x51_Mag", "", 200, 100, {"life_coplevel", "SCALAR", 4 } },//MK18 - Spar-17
+            { "30Rnd_762x39_Mag_F", "", 200, 100, {"life_coplevel", "SCALAR", 5 } }, //AK12
+			{ "10Rnd_93x64_DMR_05_Mag", "", 200, 100, {"life_coplevel", "SCALAR", 6 } },//Cyrus Ammo
+			{ "10Rnd_338_Mag", "", 200, 100, {"life_coplevel", "SCALAR", 6 } },//MAR-10
+			{ "7Rnd_408_Mag", "", 200, 100, {"life_coplevel", "SCALAR", 7 } },//LRR Ammo
+            { "10Rnd_127x54_Mag", "", 200, 100, {"life_coplevel", "SCALAR", 4 } },//ASP-1 Ammo
+			{ "130Rnd_338_Mag", "", 200, 100, {"life_coplevel", "SCALAR", 7 } },//SPMG Ammo
+			{ "30Rnd_556x45_Stanag", "", 200, 100, {"life_coplevel", "SCALAR", 3 } },//???
+			{ "30Rnd_65x39_caseless_green", "", 200, 100, {"life_coplevel", "SCALAR", 2 } },//TYP 115 Ammo
+			{ "100Rnd_580x42_Mag_F", "", 200, 100, {"life_coplevel", "SCALAR", 2 } },//CAR-95 Ammo
+			{ "150Rnd_556x45_Drum_Mag_F", "", 200, 100, {"life_coplevel", "SCALAR", 2 } },//SPAR-16S Ammo
+			{ "200Rnd_65x39_cased_Box", "", 200, 100, {"life_coplevel", "SCALAR", 2 } },//MK200
+			{ "3Rnd_HE_Grenade_shell", "", 200, 100, {"life_coplevel", "SCALAR", 3 } },//3GL-HE
+			{ "3Rnd_SmokeRed_Grenade_shell", "", 200, 100, {"life_coplevel", "SCALAR", 3 } },//3GL-Smoke Red
+			{ "3Rnd_UGL_FlareRed_F", "", 200, 100, {"life_coplevel", "SCALAR", 3 } },//3GL-Flare Red
+			{ "1Rnd_HE_Grenade_shell", "", 200, 100, {"life_coplevel", "SCALAR", 3 } },//3GL-HE AK
+			{ "1Rnd_SmokeRed_Grenade_shell", "", 200, 100, {"life_coplevel", "SCALAR", 3 } },//3GL-Smoke AK
+			{ "UGL_FlareRed_F", "", 200, 100, {"life_coplevel", "SCALAR", 3 } },//3GL-Flare Red AK
+			{ "200Rnd_556x45_Box_F", "", 200, 100, {"life_coplevel", "SCALAR", 3 } },//LIM Ammo
+			{ "20Rnd_650x39_Cased_Mag_F", "", 200, 100, {"life_coplevel", "SCALAR", 3 } },//CMR Ammo
+			{ "150Rnd_93x64_Mag", "", 200, 100, {"life_coplevel", "SCALAR", 3 } },//Navid Ammo
+			{ "5Rnd_127x108_APDS_Mag", "", 200, 100, {"life_coplevel", "SCALAR", 3 } },//Lynx APDS Ammo
+			{ "RPG32_F", "", 200, 100, {"life_coplevel", "SCALAR", 3 } },//RPG 
+			{ "RPG32_HE_F", "", 200, 100, {"life_coplevel", "SCALAR", 3 } },//RPG HE
+			{ "Titan_AA", "", 200, 100, {"life_coplevel", "SCALAR", 3 } },//Titan AA
+			{ "NLAW_F", "", 200, 100, {"life_coplevel", "SCALAR", 3 } },//NLAW
+			{ "150Rnd_762x54_Box", "", 200, 100, {"life_coplevel", "SCALAR", 3 } },//Zafir Ammo
+			{ "9Rnd_45ACP_Mag", "", 200, 100, {"life_coplevel", "SCALAR", 3 } }//ACP
+        };
+        accs[] = {
+            { "muzzle_snds_H", "", 3500, 100, { "", "", -1 } },
+            { "muzzle_snds_L", "", 3600, 100, { "", "", -1 } },
+            { "muzzle_snds_M", "", 7500, 100, { "", "", -1 } },
+            { "muzzle_snds_B", "", 1000, 100, { "", "", -1 } },
+			{ "muzzle_snds_H_MG", "", 7500, 100, { "", "", -1 } },
+			{ "muzzle_snds_H_SW", "", 7500, 100, { "", "", -1 } },
+			{ "optic_Arco", "", 7500, 100, { "", "", -1 } },
+			{ "optic_Hamr", "", 7500, 100, { "", "", -1 } },
+			{ "optic_Holosight", "", 7500, 100, { "", "", -1 } },
+			{ "optic_SOS", "", 7500, 100, { "", "", -1 } },
+			{ "optic_MRCO", "", 7500, 100, { "", "", -1 } },
+			{ "optic_NVS", "", 7500, 100, { "", "", -1 } },
+			{ "optic_DMS", "", 7500, 100, { "", "", -1 } },
+			{ "optic_Yorris", "", 7500, 100, { "", "", -1 } },
+			{ "optic_MRD", "", 7500, 100, { "", "", -1 } },
+			{ "optic_LRPS", "", 7500, 100, { "", "", -1 } },
+			{ "muzzle_snds_338_black", "", 7500, 100, { "", "", -1 } },
+			{ "muzzle_snds_338_green", "", 7500, 100, { "", "", -1 } },
+			{ "muzzle_snds_338_sand", "", 7500, 100, { "", "", -1 } },
+			{ "muzzle_snds_93mmg", "", 7500, 100, { "", "", -1 } },
+			{ "muzzle_snds_93mmg_tan", "", 7500, 100, { "", "", -1 } },
+			{ "optic_AMS", "", 7500, 100, { "", "", -1 } },
+			{ "optic_AMS_khk", "", 7500, 100, { "", "", -1 } },
+			{ "optic_KHS_hex", "", 7500, 100, { "", "", -1 } },
+			{ "optic_KHS_old", "", 7500, 100, { "", "", -1 } },
+			{ "bipod_01_F_blk", "", 7500, 100, { "", "", -1 } },
+			{ "bipod_02_F_tan", "", 7500, 100, { "", "", -1 } },
+			{ "bipod_03_F_blk", "", 7500, 100, { "", "", -1 } },
+			{ "optic_ERCO_blk_F", "", 7500, 100, { "", "", -1 } },
+			{ "optic_Hamr_khk_F", "", 7500, 100, { "", "", -1 } },
+			{ "optic_LRPS_tna_F", "", 7500, 100, { "", "", -1 } },
+			{ "optic_ERCO_khk_F", "", 7500, 100, { "", "", -1 } },
+			{ "optic_tws", "", 9150, 100, {"life_coplevel", "SCALAR", 7 } }
+        };
+    };
